@@ -1,0 +1,35 @@
+<div class="container">
+    
+    <!-- Message d'erreur si une erreur survient -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Affichage des formulaires groupés par utilisateur -->
+    <div *ngFor="let userKey of getUserKeys()" class="user-group">
+      <div class="user-header">
+        <div class="user-bubble">
+          {{ groupedForms[userKey].userName[0] }} <!-- Première lettre du nom -->
+        </div>
+        <div class="user-info">
+          <h4>{{ groupedForms[userKey].userName }}</h4>
+          <p>{{ groupedForms[userKey].userEmail }}</p>
+        </div>
+      </div>
+      
+      <div class="forms-container">
+        <ul class="list-group">
+          <li *ngFor="let form of groupedForms[userKey].forms" class="list-group-item">
+            <p><strong>Question:</strong> {{ form.question }}</p>
+            <p><strong>Response:</strong> {{ formatResponse(form.question, form.stringResponse || form.response) }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Message si aucun formulaire n'est disponible -->
+    <ng-template #noFormsMessage>
+      <p>No forms available.</p>
+    </ng-template>
+  </div>
+  

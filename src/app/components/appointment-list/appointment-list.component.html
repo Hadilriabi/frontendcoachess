@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Liste des rendez-vous</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Email de l'utilisateur</th>
+          <th>Date</th>
+          <th>Heure de début</th>
+          <th>Approuvé</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.date }}</td>
+          <td>{{ appointment.startTime }}</td>
+          <td>
+            <span [class.badge-success]="appointment.isApproved" [class.badge-warning]="!appointment.isApproved">
+              {{ appointment.isApproved ? 'Oui' : 'Non' }}
+            </span>
+          </td>
+          <td>
+            <button *ngIf="!appointment.isApproved" (click)="approveAppointment(appointment.id)" class="btn btn-primary">
+              Valider
+            </button>
+            <span *ngIf="appointment.isApproved" class="text-success">Approuvé</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="appointments.length === 0" class="alert alert-info" role="alert">
+      Aucun rendez-vous disponible.
+    </div>
+  </div>
+  

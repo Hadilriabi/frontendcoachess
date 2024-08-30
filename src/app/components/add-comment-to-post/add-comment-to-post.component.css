@@ -1,0 +1,127 @@
+/* Container for the entire page */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for the form section */
+.post-form {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+/* Group styling for form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Style for input fields and textarea */
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 100px; /* Hauteur plus grande pour la zone de texte */
+    resize: vertical; /* Permet le redimensionnement vertical */
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Styling for the likes, dislikes, and comment buttons */
+.likes-dislikes-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: #0d6efd; /* Couleur bleue */
+    border: none;
+    border-radius: 50%; /* Arrondir le bouton */
+    color: white;
+    padding: 10px; /* Ajuster le padding pour un bouton rond */
+    cursor: pointer;
+    font-size: 24px; /* Taille de l'icône */
+    width: 50px; /* Largeur fixe pour un bouton rond */
+    height: 50px; /* Hauteur fixe pour un bouton rond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn i {
+    margin: 0; /* Pas d'espace supplémentaire autour de l'icône */
+}
+
+.like-btn, .dislike-btn, .comment-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.like-btn {
+    color: green;
+}
+
+.dislike-btn {
+    color: red;
+}
+
+.comment-btn {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.btn-upload {
+    background-color: #0c80df;
+    width: auto;
+    margin-bottom: 1rem;
+    float: right;
+}
+
+.btn-upload:hover {
+    background-color: #0077d9;
+}
+
+/* Additional styling for form buttons */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,115 @@
+/* Container for the page */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Container for each comment */
+.comment-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Card-like effect */
+}
+
+/* Styling for user information */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Style for the user avatar */
+.user-avatar {
+    background-color: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Style for user details */
+.user-details {
+    flex: 1;
+}
+
+/* Style for user name and email */
+.user-details p {
+    margin: 0;
+}
+
+.user-details .user-name {
+    font-weight: bold;
+}
+
+.user-details .user-email {
+    color: #555;
+}
+
+/* Styling for the comment content */
+.comment-form {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Style for the comment text */
+.comment-text {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style for the comment date */
+.comment-date {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Container for the like/dislike buttons */
+.likes-dislikes-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Style for like button */
+.like-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+/* Style for dislike button */
+.dislike-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+/* Hover effect for like/dislike buttons */
+.like-btn:hover,
+.dislike-btn:hover {
+    background-color: #f0f0f0;
+}

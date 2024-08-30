@@ -1,0 +1,120 @@
+/* Container for the form to center it and add padding */
+form {
+    max-width: 600px; /* Augmentez la largeur maximale du formulaire */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Coins arrondis plus marqués */
+    background-color: #ffffff; /* Couleur de fond blanche pour plus de clarté */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+  }
+  
+  /* Style for the form elements */
+  form div {
+    margin-bottom: 20px; /* Espacement plus large entre les éléments du formulaire */
+  }
+  
+  /* Style for the form labels */
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.1rem; /* Taille de police légèrement plus grande */
+  }
+  
+  /* Style for the form input fields */
+  form input,
+  form textarea {
+    width: 100%; /* Pleine largeur du conteneur */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Coins arrondis plus marqués pour les champs de texte */
+    font-size: 1rem; /* Taille de police plus grande pour une meilleure lisibilité */
+    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur totale */
+  }
+  
+  /* Style for the textarea to make it larger */
+  form textarea {
+    height: 300px; /* Hauteur plus grande pour une meilleure visualisation du texte */
+    resize: vertical; /* Permet la redimension verticale */
+  }
+  
+  /* Style for the error messages */
+  .text-danger {
+    color: #e74c3c; /* Rouge vif pour plus de visibilité */
+    font-size: 0.9rem; /* Taille de police légèrement plus petite */
+    margin-top: 5px;
+  }
+  
+  /* Style for the submit button */
+  form button[type="submit"] {
+    background-color: #007bff; /* Couleur bleue Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Coins arrondis pour le bouton */
+    padding: 12px 24px;
+    font-size: 1rem; /* Taille de police du bouton */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+  }
+  
+  /* Star rating styles */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 2.5rem; /* Taille des étoiles pour une meilleure visibilité */
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    margin: 0 0.2rem; /* Espacement plus large entre les étoiles */
+  }
+  
+  .star.filled {
+    color: #ffd700; /* Couleur dorée pour les étoiles pleines */
+  }
+  
+  .star.hover {
+    color: #ffd700; /* Couleur dorée pour les étoiles survolées */
+    transform: scale(1.2); /* Agrandissement léger au survol */
+  }
+  
+  .star:hover,
+  .star:focus {
+    color: #ffcc00; /* Couleur légèrement différente au survol */
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* General page styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Couleur de fond légère pour la page */
+    margin: 0;
+    padding: 0;
+  }
+  

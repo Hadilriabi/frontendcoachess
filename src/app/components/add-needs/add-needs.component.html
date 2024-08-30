@@ -1,0 +1,15 @@
+<div class="form-container">
+  <form [formGroup]="needsForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="ListOfNeeds">Your Needs:</label>
+      <textarea id="ListOfNeeds" formControlName="ListOfNeeds" rows="10" class="form-control"></textarea>
+      <div *ngIf="submitted && needsForm.get('ListOfNeeds')?.invalid" class="text-danger">
+        This field is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

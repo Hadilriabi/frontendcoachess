@@ -1,0 +1,16 @@
+<form [formGroup]="formForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>How would you rate the quality of our products/services?</label>
+      <div>
+        <label *ngFor="let option of formEnumOptions">
+          <input type="radio" formControlName="stringResponse" [value]="option">
+          {{ option }}
+        </label>
+      </div>
+      <div *ngIf="submitted && formForm.get('stringResponse')?.invalid" class="text-danger">
+        This field is required.
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>

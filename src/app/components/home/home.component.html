@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Buttons</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            color: #fff;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            background: #fff;
+            color: #4CAF50;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background: #4CAF50;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="button-container">
+            <button (click)="navigateToAddResponse1()">Share My Opinion via Form</button>
+            <button (click)="navigateToMyNeeds()">My Needs</button>
+            <button (click)="navigateToMessage()">Send a Message to the Admin</button>
+            <button (click)="navigateToapp()">Make a Call with the Admin</button>
+            <button (click)="navigateTopost()">Join Cochess Community</button>
+
+
+        </div>
+        
+    </div>
+
+    <script>
+        function shareMyOpinion() {
+            alert('Share My Opinion via Form button clicked');
+        }
+
+        function myNeeds() {
+            alert('My Needs button clicked');
+        }
+
+        function sendMessageToAdmin() {
+            alert('Send a Message to the Admin button clicked');
+        }
+
+        function makeCallWithAdmin() {
+            alert('Make a Call with the Admin button clicked');
+        }
+    </script>
+</body>
+</html>

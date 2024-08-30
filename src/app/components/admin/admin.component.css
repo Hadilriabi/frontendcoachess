@@ -1,0 +1,28 @@
+/* Style pour le conteneur principal */
+.admin-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style pour le titre */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour le bouton de navigation */
+  .navigate-button {
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navigate-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+  }
+  

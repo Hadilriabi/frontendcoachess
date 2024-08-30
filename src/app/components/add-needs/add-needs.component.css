@@ -1,0 +1,73 @@
+/* Container for the form to center it and add padding */
+form {
+    max-width: 600px; /* Augmentez la largeur maximale pour plus de flexibilité */
+    margin: 0 auto;
+    padding: 30px; /* Augmentez le padding pour un formulaire plus spacieux */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff; /* Utilisez une couleur de fond blanche pour un contraste plus net */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce pour plus de profondeur */
+}
+
+/* Style for the form elements */
+form div {
+    margin-bottom: 20px; /* Augmentez l'espacement entre les éléments du formulaire */
+}
+
+/* Style for the form labels */
+form label {
+    display: block;
+    font-weight: 600; /* Utilisez une graisse de police légèrement plus épaisse */
+    margin-bottom: 10px; /* Augmentez l'espacement en dessous des labels */
+    color: #333;
+    font-size: 16px; /* Augmentez la taille de la police pour les labels */
+}
+
+/* Style for the form input fields */
+form input,
+form textarea {
+    width: 100%; /* Pleine largeur du conteneur */
+    padding: 12px; /* Augmentez le padding pour plus de confort */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Utilisez un rayon de bordure légèrement plus grand */
+    font-size: 16px; /* Gardez la taille de la police uniforme */
+    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur totale */
+}
+
+/* Style for the textarea to make it larger */
+form textarea {
+    height: 300px; /* Augmentez la hauteur pour une plus grande zone de texte */
+    resize: vertical; /* Permet le redimensionnement vertical uniquement */
+    overflow: auto; /* Ajoutez un défilement automatique si nécessaire */
+}
+
+/* Style for the error messages */
+.text-danger {
+    color: #d9534f; /* Utilisez une couleur rouge plus claire */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Style for the submit button */
+form button[type="submit"] {
+    background-color: #007bff; /* Couleur bleue de Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rayon de bordure légèrement plus grand pour les boutons */
+    padding: 12px 24px; /* Augmentez le padding pour un bouton plus grand */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Ajoutez une transition pour l'effet de transformation */
+}
+
+/* Button hover effect */
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+    transform: scale(1.05); /* Ajoute un léger agrandissement au survol */
+}
+
+/* Button focus effect */
+form button[type="submit"]:focus {
+    outline: none; /* Retirer le contour par défaut au focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Ajouter un ombrage pour le focus */
+}

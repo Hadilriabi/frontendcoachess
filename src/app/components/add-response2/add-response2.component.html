@@ -1,0 +1,11 @@
+<form [formGroup]="formForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="response">On a scale of 1 to 10, how likely are you to recommend us to a friend or colleague?</label>
+      <input type="range" id="response" formControlName="response" min="1" max="10" />
+      <div *ngIf="submitted && formForm.get('response')?.invalid" class="text-danger">
+        This field is required.
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>

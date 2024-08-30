@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>All Comments</h1>
+
+  <div *ngFor="let comment of cmtrs" class="comment-container">
+    <!-- User Information -->
+    <div class="user-info">
+      <div class="user-avatar">{{ comment.user.username }}</div>
+      <div class="user-details">
+        <p>{{ comment.user.username }}</p>
+        <p>({{ comment.user.email }})</p>
+      </div>
+    </div>
+
+    <!-- Comment Content -->
+    <div class="comment-form">
+      <p class="comment-text">{{ comment.descCmnt }}</p>
+      <span class="comment-date">{{ formatDate(comment.dateCmnt) }}</span>
+    </div>
+
+    
+
+<!-- FontAwesome CSS for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

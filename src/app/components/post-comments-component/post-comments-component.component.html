@@ -1,0 +1,12 @@
+<div *ngIf="comments.length > 0; else noComments">
+    <h2>All Comments </h2>
+    <ul>
+      <li *ngFor="let comment of comments">
+        {{ comment.descCmnt }} - {{ comment.dateCmnt }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noComments>
+    <p>Aucun commentaire pour ce post.</p>
+  </ng-template>
+  

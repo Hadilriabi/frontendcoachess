@@ -1,0 +1,40 @@
+<div class="appointments-container">
+  <h2>All Appointments</h2>
+  <ul>
+    <li *ngFor="let appointment of appointments">
+      <div class="appointment-wrapper">
+        <div class="user-info" *ngIf="appointment.user">
+          <div class="user-avatar">
+            {{ appointment.user.username.charAt(0) }}
+          </div>
+          <div class="user-details">
+            <p><strong>{{ appointment.user.username }}</strong></p>
+            <p>{{ appointment.user.email }}</p>
+          </div>
+        </div>
+        <div class="appointment-details">
+          <p><strong>Date:</strong> {{ appointment.date }}</p>
+          <p><strong>Start Time:</strong> {{ appointment.startTime }}</p>
+          <p><strong>Approved:</strong> 
+            <span *ngIf="appointment.isApproved" class="tick-icon">&#10003;</span>
+            <span *ngIf="!appointment.isApproved">Not Approved</span>
+          </p>
+        </div>
+        <p *ngIf="!appointment.user">
+          User information not available
+        </p>
+        <div class="approve-button">
+          <button class="btn btn-success" 
+                  *ngIf="!appointment.isApproved" 
+                  (click)="approveAppointment(appointment.id)">
+            Approve
+          </button>
+        </div>
+      </div>
+      <hr>
+    </li>
+  </ul>
+  
+  <!-- FullCalendar Component -->
+  <full-calendar #calendar [options]="calendarOptions"></full-calendar>
+</div>

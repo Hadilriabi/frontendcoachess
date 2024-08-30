@@ -1,0 +1,19 @@
+<form [formGroup]="formForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="response">Rate your overall experience</label>
+      <div class="star-rating">
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" 
+              (click)="setRating(i + 1)" 
+              [class.filled]="i < rating" 
+              [class.hover]="i < (rating || 0)" 
+              class="star">&#9733;</span>
+      </div>
+      <input id="response" formControlName="response" type="hidden" />
+      <div *ngIf="submitted && formForm.get('response')?.invalid" class="text-danger">
+        This field is required.
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
